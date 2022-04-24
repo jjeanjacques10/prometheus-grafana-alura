@@ -29,6 +29,15 @@ management.endpoints.web.exposure.include=health,info,metrics
     - [GET] [/actuator/prometheus](http://localhost:8080/actuator/prometheus)
 
 - É possível adicionar métricas personalizadas com ``io.micrometer.core.instrument``
+- Configurando o healthcheck pelo docker-compose
+
+``` yaml
+  healthcheck:
+    test: "curl -sS http://app-forum-api:8080/actuator/health"
+    interval: 1s
+    timeout: 30s
+    retries: 60
+```
 
 ## Referência
 
