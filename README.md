@@ -11,6 +11,20 @@ Curso de observabilidade da Alura utilizando Prometheus e Grafana. A aplicação
 - Spring Boot
 - Docker
 
+## Anotações
+
+- Adicionando configurações do actuator
+
+``` xml
+# actuator
+management.endpoint.health.show-details=always
+management.endpoints.web.exposure.include=health,info,metrics
+```
+
+- Endpoints do actuator
+    - [GET] [/actuator/health](http://localhost:8080/actuator/health)
+    - [GET] [/actuator/metrics](http://localhost:8080/actuator/metrics)
+
 ## Referência
 
 - [Observabilidade: coletando métricas de uma aplicação com Prometheus](https://cursos.alura.com.br/course/observabilidade-prometheus)
