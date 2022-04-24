@@ -11,6 +11,7 @@ Curso de observabilidade da Alura utilizando Prometheus e Grafana. A aplicação
 - Spring Boot
 - Docker
 - [Micrometer](https://micrometer.io/docs)
+- [Spring Metrics](https://docs.spring.io/spring-metrics/docs/current/public/prometheus)
 
 ## Anotações
 
@@ -26,6 +27,8 @@ management.endpoints.web.exposure.include=health,info,metrics
     - [GET] [/actuator/health](http://localhost:8080/actuator/health)
     - [GET] [/actuator/metrics](http://localhost:8080/actuator/metrics)
     - [GET] [/actuator/prometheus](http://localhost:8080/actuator/prometheus)
+
+- É possível adicionar métricas personalizadas com ``io.micrometer.core.instrument``
 
 ## Referência
 
