@@ -6,7 +6,7 @@ Curso de observabilidade da Alura utilizando Prometheus e Grafana. A aplicação
 
 ## Tecnologias
 
-- Prometheus
+- [Prometheus](https://prometheus.io/docs/introduction/overview/)
 - Grafana
 - Spring Boot
 - Docker
@@ -48,6 +48,22 @@ management.endpoints.web.exposure.include=health,info,metrics
     timeout: 30s
     retries: 60
 ```
+
+- Tipos de métricas Prometheus
+    - **Counter**
+        - É uma métrica acumulativa que representa um único contador que sempre será incrementado. Não use um contador
+          para expor um valor que pode diminuir. Por exemplo, não use um contador para o número de processos em execução
+          no momento; em vez disso, use um Gauge.
+    - **Gauge**
+        - É uma métrica que representa um valor número que pode crescer e diminuir. Os medidores são normalmente usados
+          para valores medidos como temperaturas ou uso de memória atual, mas também "contagens" que podem aumentar e
+          diminuir, como o número de solicitações simultâneas.
+    - **Histogram**
+        - O *histogram* mostra observações com durações ou tamanhos de resposta. Ele também fornece uma soma de todos os
+          valores observados.
+    - **Summary**
+        - Muito parecido com o histogram, embora também forneça uma contagem total de observações e uma soma de todos os
+          valores observados, ele calcula quantis configuráveis em uma janela de tempo deslizante.
 
 ## Referência
 
