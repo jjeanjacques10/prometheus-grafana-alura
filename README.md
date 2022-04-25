@@ -13,6 +13,16 @@ Curso de observabilidade da Alura utilizando Prometheus e Grafana. A aplicação
 - [Micrometer](https://micrometer.io/docs)
 - [Spring Metrics](https://docs.spring.io/spring-metrics/docs/current/public/prometheus)
 
+### Configuração do ambiente
+
+Estamos utilizando o docker, para rodar os container rode o seguinte comando:
+
+``` bash
+docker-compose up -d
+```
+
+Na pasta [client](./client) temos um simulador de chamadas para criar as métricas necessárias.
+
 ## Anotações
 
 - Adicionando configurações do actuator
