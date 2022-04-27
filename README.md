@@ -13,6 +13,25 @@ Curso de observabilidade da Alura utilizando Prometheus e Grafana. A aplicação
 - [Micrometer](https://micrometer.io/docs)
 - [Spring Metrics](https://docs.spring.io/spring-metrics/docs/current/public/prometheus)
 
+### Dashboard Grafana
+
+Visualizações criadas no grafana:
+
+<table border="0" style="text-align: center; justify-content: center; align-items: center; ">
+  <tr>
+      <td style="text-align: center">
+          <img src="./files/dashboard.png"
+              width="450px" />
+          </br>
+      </td>
+      <td style="text-align: center">
+          <img src="./files/dashboard2.png"
+              width="450px" />
+          </br>
+      </td>
+  </tr>
+</table>
+  
 ### Configuração do ambiente
 
 Estamos utilizando o docker, para rodar os container rode o seguinte comando:
@@ -65,9 +84,19 @@ management.endpoints.web.exposure.include=health,info,metrics
         - Muito parecido com o histogram, embora também forneça uma contagem total de observações e uma soma de todos os
           valores observados, ele calcula quantis configuráveis em uma janela de tempo deslizante.
 
+- Golden Signals
+    - Latência
+    - Tráfego
+    - Saturação
+    - Erros
+
+- A pasta do [grafana](./grafana) precisa ter permissão 777
+- Documentação uso do grafana com prometheus - https://grafana.com/docs/grafana/latest/datasources/prometheus/
+
 ## Referência
 
 - [Observabilidade: coletando métricas de uma aplicação com Prometheus](https://cursos.alura.com.br/course/observabilidade-prometheus)
+- [Monitoramento: Prometheus, Grafana e Alertmanager](https://cursos.alura.com.br/course/monitoramento-prometheus-grafana-alertmanager)
 
 ---
 Desenvolvido por [Jean Jacques Barros](https://github.com/jjeanjacques10)
